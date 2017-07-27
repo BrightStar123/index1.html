@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="free.js"></script>
+<style>
+#outside{
+z-index :1;
+position :absolute;
+background-color:pink;
+height:600px;
+width:600px;
+text-align:center;
+transition:1s;
+transform-origin:0;}
+#outside-title{color:black;
+font-family:courier;
+font-size:18pt;
+text-align:center;}
+#outside-pic{
+width:500px;
+height:500px;}
+.open-card{
+transform:rotateY(90deg);}
+#inside{
+z-index:0;
+position:absolute;
+height:600px;
+width:600px;
+text-align:center;
+background-color:green;}
+#inside-title{
+color:yellow;
+font-family:courier;
+font-size:18pt;
+text-align:center;}
+#inside-pic{width:500px;
+height:500px;
+}
+button{background:yellow;
+font-size:18pt;
+}
+
+</style>
+</head>
+<body>
+<div id="outside">
+<h1 id="outside-title">
+Happy birth day to Madmain ! 
+</h1>
+<img id="outside-pic" src="my rose.jpg">
+<div>
+<button type="button" onclick="open_card()">Open me</button>
+
+
+</div>
+</div>
+<div id="inside">
+<h1 id="inside-title">
+Happy Birth Day To Jani !</h1>
+<img id="inside-pic" src="my cake.jpg">
+<div>
+<button onclick='close_card()'>Close me</button>
+
+</div>
+</div>
+
+<script>
+function open_card(){
+document.getElementById('outside').className='open-card';}
+function close_card(){
+document.getElementById('outside').className=' ';}
+</script>
+
+</body>
+</html>
